@@ -1,5 +1,5 @@
 /// Example class that conforms to `GIFAnimatable`. Uses default values for the animator frame buffer count and resize behavior. You can either use it directly in your code or use it as a blueprint for your own subclass.
-public class GIFImageView: UIImageView, GIFAnimatable {
+open class GIFImageView: UIImageView, GIFAnimatable {
 
   /// A lazy animator.
   public lazy var animator: Animator? = {
@@ -9,7 +9,7 @@ public class GIFImageView: UIImageView, GIFAnimatable {
   /// Layer delegate method called periodically by the layer. **Should not** be called manually.
   ///
   /// - parameter layer: The delegated layer.
-  override public func display(_ layer: CALayer) {
+  override open func display(_ layer: CALayer) {
     updateImageIfNeeded()
   }
 }
